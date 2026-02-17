@@ -228,6 +228,20 @@ footer{
   // 1. PROJECT DATA
   const projectsData = [
     {
+      title: "BiathlONE Autonomous Robot",
+      date: "Jan 2026 – Jan 2026 • Toronto Metropolitan University",
+      image: "assets/images/biathlone_robot.jpg", 
+      // PASTE YOUR DEVPOST URL BELOW
+      link: "https://devpost.com/software/biathlone",
+      description: "Designed and built an autonomous Arduino-based robot integrating ultrasonic, IR, and color sensors for real-time navigation, obstacle avoidance, and path selection.",
+      bullets: [
+        "Developed embedded C++ code using the Arduino IDE to implement state-based logic, sensor feedback control, and conditional decision-making for autonomous task sequencing.",
+        "Optimized mechanical stability and sensor calibration through iterative testing to achieve consistent performance under strict competition time constraints."
+      ],
+      results: "",
+      skills: "Arduino, C++, Robotics"
+    },
+    {
       title: "Rankine Cycle Plant Design",
       date: "Oct 2025 – Dec 2025 • Toronto Metropolitan University",
       image: "assets/images/rankine_diagram.jpg",
@@ -274,9 +288,14 @@ footer{
     const bulletPoints = project.bullets.map(item => `<li>${item}</li>`).join('');
     const resultHTML = project.results ? `<p><strong>Results:</strong> ${project.results}</p>` : '';
     
+    // Check if a link exists. If yes, wrap image in <a> tag.
+    const imageHTML = project.link 
+      ? `<a href="${project.link}" target="_blank" title="View on Devpost"><img src="${project.image}" alt="${project.title}" style="cursor:pointer; transition: opacity 0.3s;"></a>` 
+      : `<img src="${project.image}" alt="${project.title}">`;
+
     return `
       <div class="card">
-        <img src="${project.image}" alt="${project.title}">
+        ${imageHTML}
         <div class="card-content">
           <h3>${project.title}</h3>
           <small>${project.date}</small>
@@ -298,7 +317,7 @@ footer{
     var current = "";
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
-      if (pageYOffset >= sectionTop - 150) { // -150 offset for better timing
+      if (pageYOffset >= sectionTop - 150) { 
         current = section.getAttribute("id");
       }
     });
