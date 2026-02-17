@@ -52,6 +52,7 @@ body{display:flex;background:#0b1a2b;color:#e2e8f0;line-height:1.6}
   align-items:center;
   justify-content:space-between;
   min-height:80vh;
+  margin-bottom: 100px; /* Space between hero and projects */
 }
 .hero-text{max-width:600px}
 .hero h2{
@@ -85,9 +86,7 @@ body{display:flex;background:#0b1a2b;color:#e2e8f0;line-height:1.6}
 .btn-primary{background:#38bdf8;color:#0b1a2b}
 .btn-secondary{border:1px solid #38bdf8;color:#38bdf8}
 
-/* Resume centering and link highlight */
-#resume{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;text-align:center}
-.resume-preview{width:100%;max-width:700px;margin-top:16px}
+/* Resume link specific styles */
 .resume-link{color:#ffffff;border-color:#ffffff;background:transparent;padding:10px 16px;border-width:1px;border-style:solid;border-radius:6px;text-decoration:none;font-weight:600}
 .resume-link:hover{background:#ffffff;color:#0b1a2b;transform:translateY(-2px)}
 
@@ -98,8 +97,11 @@ body{display:flex;background:#0b1a2b;color:#e2e8f0;line-height:1.6}
 }
 
 /* --- PROJECTS SECTION --- */
-.section{margin-top:120px}
-.section h2{font-size:2.2rem;margin-bottom:40px}
+.section{
+  padding-top: 80px; /* Offset for scrolling so header doesn't cover title */
+  margin-bottom: 120px;
+}
+.section h2{font-size:2.2rem;margin-bottom:40px; border-bottom: 2px solid #1e3a5f; padding-bottom: 10px; display: inline-block;}
 
 .projects{
   display:grid;
@@ -117,7 +119,7 @@ body{display:flex;background:#0b1a2b;color:#e2e8f0;line-height:1.6}
 .card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,.5)}
 .card img{width:100%;height:220px;object-fit:cover}
 
-/* --- CARD CONTENT SPACING --- */
+/* --- CARD CONTENT --- */
 .card-content{
   padding:32px;
   flex-grow: 1;
@@ -150,13 +152,9 @@ body{display:flex;background:#0b1a2b;color:#e2e8f0;line-height:1.6}
 .card-content li {
   margin-bottom: 10px;
 }
-.card-content .buttons {
-  margin-top: auto; 
-  padding-top: 10px;
-}
 
 footer{
-  margin-top:120px;
+  margin-top:auto;
   padding-top:40px;
   padding-bottom: 40px;
   border-top:1px solid #1e3a5f;
@@ -176,10 +174,10 @@ footer{
 
 <div class="sidebar">
   <h1>Janushan Sivakrishna</h1>
-  <a href="#home">Home</a>
-  <a href="projects.html">Projects</a>
-  <a href="#clubs">Clubs</a>
-  <a href="#about">About</a>
+  <a href="#home" class="nav-link">Home</a>
+  <a href="#projects" class="nav-link">Projects</a>
+  <a href="#clubs" class="nav-link">Clubs</a>
+  <a href="#about" class="nav-link">About</a>
 </div>
 
 <div class="main">
@@ -189,31 +187,126 @@ footer{
       <h2>Hi, I'm Janushan Sivakrishna!</h2>
       <h3>Third Year Mechanical Engineering Student</h3>
       <p>
-        Third-Year Mechanical Engineering student with a strong interest in hands-on engineering,
-        system integration, and embedded programming. Experienced with sensors,
-        control systems, and robotics development.
+        Third-year Mechanical Engineering student with a strong background in mechanical design, thermal systems, and manufacturing. My experience ranges from optimizing industrial tool mechanisms as a Mechanical Design Intern to performing thermodynamic analysis for a theoretical Rankine cycle power plant.
+
       </p>
       <div class="buttons">
-        <a href="projects.html" class="btn-primary">View My Work</a>
+        <a href="#projects" class="btn-primary">View My Work</a>
         <a href="assets/Janushan_Sivakrishna_Resume.pdf" class="btn-secondary resume-link" download>Resume</a>
       </div>
     </div>
     <img src="assets/images/profile.jpg" alt="Profile Photo">
   </section>
 
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects" id="projects-container">
+      </div>
+  </section>
+
+  <section id="clubs" class="section" style="min-height: 50vh;">
+    <h2>Clubs & Extracurriculars</h2>
+    <p>Content coming soon...</p>
+  </section>
+
+  <section id="about" class="section" style="min-height: 50vh;">
+    <h2>About Me</h2>
+    <p>Content coming soon...</p>
+  </section>
+
   <footer>
     © 2026 Janushan Sivakrishna | Portfolio
   </footer>
 
-  <script>
-    // mark sidebar active for Home
-    document.querySelectorAll('.sidebar a').forEach(a => {
-      try {
-        if (a.getAttribute('href') === '#home' || a.getAttribute('href') === 'index.html') a.classList.add('active');
-      } catch(e){}
-    });
-  </script>
 </div>
+
+<script>
+  // 1. PROJECT DATA
+  const projectsData = [
+    {
+      title: "Rankine Cycle Plant Design",
+      date: "Oct 2025 – Dec 2025 • Toronto Metropolitan University",
+      image: "assets/images/rankine_diagram.jpg",
+      description: "Designed an 80 MWe / 25 MWth natural gas Rankine cycle power plant to provide sustainable power and district heating for remote Canadian communities. Focused on maximizing thermal efficiency and economic viability through advanced cycle optimization.",
+      bullets: [
+        "Engineered a four-stage turbine setup with reheat and regenerative cycles; compared three iterations.",
+        "Integrated three feedwater heaters (two closed, one open) and a 0.08 bar condenser to recover 125°C waste heat.",
+        "Validated with MATLAB simulations using the XSteam library; performed methane cost analyses."
+      ],
+      results: "Mass flow 78.31 kg/s • Thermal power 135.39 MW • Electrical output 80.00 MW • Efficiency 45.47%",
+      skills: "Thermodynamics, MATLAB"
+    },
+    {
+      title: "Ball Transport Mechanism",
+      date: "Mar 2025 – Apr 2025 • Toronto Metropolitan University",
+      image: "assets/images/ball_mechanism_drawing.jpg",
+      description: "Designed a four-bar linkage claw mechanism for torque reduction and motion efficiency; created CAD models and prepared parts for laser cutting.",
+      bullets: [
+        "Performed force and torque calculations to validate functionality.",
+        "Produced detailed CAD assembly drawings, BOM and 2D laser-cut files (.dxf).",
+        "Conducted prototype testing to meet competition rules and sorting performance criteria."
+      ],
+      results: "",
+      skills: "SOLIDWORKS, Design Evaluation"
+    },
+    {
+      title: "QuickHome",
+      date: "Sep 2024 – Dec 2024 • Toronto Metropolitan University",
+      image: "assets/images/quickhome_thumbnail.jpg",
+      description: "Developed a portable shelter design prioritizing safety, adaptability, and sustainability; integrated team CAD work and prepared PDS/PRS documents to MEC 325 standards.",
+      bullets: [
+        "Conducted systems analysis and persona-driven design criteria.",
+        "Built SolidWorks CAD model and documented design issues for refinement.",
+        "Prepared Product Design Specification and requirements documentation."
+      ],
+      results: "",
+      skills: "Teamwork, SOLIDWORKS"
+    }
+  ];
+
+  // 2. RENDER PROJECTS
+  const container = document.getElementById('projects-container');
+  const projectHTML = projectsData.map(project => {
+    const bulletPoints = project.bullets.map(item => `<li>${item}</li>`).join('');
+    const resultHTML = project.results ? `<p><strong>Results:</strong> ${project.results}</p>` : '';
+    
+    return `
+      <div class="card">
+        <img src="${project.image}" alt="${project.title}">
+        <div class="card-content">
+          <h3>${project.title}</h3>
+          <small>${project.date}</small>
+          <p>${project.description}</p>
+          <ul>${bulletPoints}</ul>
+          ${resultHTML}
+          <p><strong>Skills:</strong> ${project.skills}</p>
+        </div>
+      </div>
+    `;
+  }).join('');
+  container.innerHTML = projectHTML;
+
+  // 3. HIGHLIGHT SIDEBAR LINK ON SCROLL
+  const sections = document.querySelectorAll("section");
+  const navLi = document.querySelectorAll(".sidebar a");
+
+  window.onscroll = () => {
+    var current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 150) { // -150 offset for better timing
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLi.forEach((li) => {
+      li.classList.remove("active");
+      if (li.getAttribute("href").includes(current)) {
+        li.classList.add("active");
+      }
+    });
+  };
+</script>
 
 </body>
 </html>
