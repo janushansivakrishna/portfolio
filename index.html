@@ -37,6 +37,7 @@ body{display:flex;background:#0b1a2b;color:#e2e8f0;line-height:1.6}
   color:#38bdf8;
   transform:translateX(5px);
 }
+.sidebar a.active{color:#ffffff;font-weight:700}
 
 /* --- MAIN CONTENT LAYOUT --- */
 .main{
@@ -216,6 +217,14 @@ footer{
     © 2026 Janushan Sivakrishna | Portfolio
   </footer>
 
+  <script>
+    // mark sidebar active for Home
+    document.querySelectorAll('.sidebar a').forEach(a => {
+      try {
+        if (a.getAttribute('href') === '#home' || a.getAttribute('href') === 'index.html') a.classList.add('active');
+      } catch(e){}
+    });
+  </script>
 </div>
 
 </body>
