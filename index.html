@@ -66,11 +66,13 @@ body{display:flex;background:#0b1a2b;color:#e2e8f0;line-height:1.6}
   font-weight:500;
   font-size: 1.5rem;
 }
-.hero p{
-  color:#94a3b8;
-  line-height:1.8;
-  margin-bottom:30px;
+.hero p {
+  color: #94a3b8;
+  line-height: 1.8;       /* Increases space between lines */
+  margin-bottom: 35px;    /* Increases space between text and buttons */
   font-size: 1.1rem;
+  max-width: 650px;       /* Keeps the line length easy to read */
+  letter-spacing: 0.02em; /* Adds a tiny bit of air between letters */
 }
 .buttons { margin-top: 20px; }
 .buttons a{
@@ -186,10 +188,12 @@ footer{
     <div class="hero-text">
       <h2>Hi, I'm Janushan Sivakrishna!</h2>
       <h3>Third Year Mechanical Engineering Student</h3>
-      <p>
-        Third-year Mechanical Engineering student with a strong background in mechanical design, thermal systems, and manufacturing. My experience ranges from optimizing industrial tool mechanisms as a Mechanical Design Intern to performing thermodynamic analysis for a theoretical Rankine cycle power plant.
-
-      </p>
+<p>
+  Third-year Mechanical Engineering student with a strong background in mechanical design, 
+  thermal systems, and manufacturing. My experience ranges from optimizing industrial 
+  tool mechanisms as a Mechanical Design Intern to performing thermodynamic analysis 
+  for a theoretical Rankine cycle power plant.
+</p>
       <div class="buttons">
         <a href="#projects" class="btn-primary">View My Work</a>
         <a href="assets/Janushan_Sivakrishna_Resume.pdf" class="btn-secondary resume-link" download>Resume</a>
