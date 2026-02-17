@@ -49,9 +49,7 @@ footer{margin-top:120px;padding-top:40px;padding-bottom:40px;border-top:1px soli
   <h1>Janushan Sivakrishna</h1>
   <a href="index.html">Home</a>
   <a href="projects.html">Projects</a>
-  <a href="#competitions">Competitions</a>
   <a href="#clubs">Clubs</a>
-  <a href="#volunteering">Volunteering</a>
   <a href="#about">About</a>
 </div>
 
@@ -125,9 +123,13 @@ footer{margin-top:120px;padding-top:40px;padding-bottom:40px;border-top:1px soli
   const container = document.getElementById('projects-container');
 
   const projectHTML = projectsData.map(project => {
+    // Generate bullets HTML
     const bulletPoints = project.bullets.map(item => `<li>${item}</li>`).join('');
-    // no download/action buttons shown on project cards per request
+    
+    // Generate results HTML if results exist
     const resultHTML = project.results ? `<p><strong>Results:</strong> ${project.results}</p>` : '';
+    
+    // Return the card structure
     return `
       <div class="card">
         <img src="${project.image}" alt="${project.title}">
@@ -138,7 +140,6 @@ footer{margin-top:120px;padding-top:40px;padding-bottom:40px;border-top:1px soli
           <ul>${bulletPoints}</ul>
           ${resultHTML}
           <p><strong>Skills:</strong> ${project.skills}</p>
-          <!-- links removed from project cards -->
         </div>
       </div>
     `;
@@ -154,7 +155,6 @@ footer{margin-top:120px;padding-top:40px;padding-bottom:40px;border-top:1px soli
       if (a.getAttribute('href') === 'projects.html') a.classList.add('active');
     } catch (e) {}
   });
-</script>
 </script>
 
 </body>
