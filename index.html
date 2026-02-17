@@ -55,11 +55,16 @@ body{display:flex;background:#0b1a2b;color:#e2e8f0;line-height:1.6}
   margin-bottom: 100px; /* Space between hero and projects */
 }
 .hero-text{max-width:600px}
+
+/* --- UPDATED H2 STYLE HERE --- */
 .hero h2{
-  font-size:3rem;
+  /* This ensures the font shrinks on smaller screens so it fits on one line */
+  font-size: clamp(1.5rem, 4vw, 3rem); 
+  white-space: nowrap; /* This forces the text to stay on one line */
   margin-bottom:20px;
   line-height: 1.1;
 }
+
 .hero h3{
   color:#38bdf8;
   margin-bottom:15px;
@@ -191,7 +196,7 @@ footer{
 <p>
   Third-year Mechanical Engineering student with a strong background in mechanical design, 
   thermal systems, and manufacturing. My experience ranges from optimizing industrial 
-  tool mechanisms as a Mechanical Design Intern to performing thermodynamic analysis 
+  tool mechanisms in SolidWorks to performing thermodynamic analysis 
   for a theoretical Rankine cycle power plant.
 </p>
       <div class="buttons">
@@ -209,7 +214,7 @@ footer{
   </section>
 
   <section id="clubs" class="section" style="min-height: 50vh;">
-    <h2>Clubs & Extracurriculars</h2>
+    <h2>Clubs</h2>
     <p>Content coming soon...</p>
   </section>
 
@@ -230,11 +235,9 @@ footer{
    {
       title: "BiathlONE Autonomous Robot",
       date: "Jan 2026 – Jan 2026 • Toronto Metropolitan University",
-      
-      // 1. PASTE THE IMAGE ADDRESS FROM DEVPOST HERE:
+ 
       image: "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/004/230/753/datas/gallery.jpg", 
       
-      // 2. PASTE THE LINK TO THE PROJECT PAGE HERE:
       link: "https://devpost.com/software/biathlone",
       
       description: "Designed and built an autonomous Arduino-based robot integrating ultrasonic, IR, and color sensors for real-time navigation, obstacle avoidance, and path selection.",
