@@ -322,7 +322,21 @@ footer{
 <script>
   // 1. PROJECT DATA
   const projectsData = [
-   {
+  {
+    title: "RC Rover",
+    date: "Apr 2026 – May 2026",
+    image: "assets/images/rc_rover.png",
+      description: "RC rover project integrating mechanical design and embedded programming to create a remote-controlled vehicle with a robotic arm and claw for object manipulation.",
+      bullets: [
+        "Designed chassis, 3DOF robotic arm, and claw mechanism in Onshape and SolidWorks, then 3D printed components using Bambu Lab printers.",
+        "Integrated ESP32, servo motors, and L298N motor driver for vehicle mobility and arm actuation.",
+        "Programmed C++ firmware in the Arduino IDE for wireless DS4 controller navigation and claw control.",
+        "Validated motion and grip performance through iterative testing and tuning."
+      ],
+      results: "",
+      skills: "3D Printing, SOLIDWORKS, ESP32, C++, Arduino"
+    }, 
+  {
       title: "BiathlONE Autonomous Robot",
       date: "Jan 2026 – Jan 2026 • UTRA Hacks 2026",
  
@@ -376,26 +390,29 @@ footer{
       ],
       results: "",
       skills: "Teamwork, SOLIDWORKS"
-    },
-    {
-    title: "RC Rover",
-    date: "Apr 2026 – May 2026",
-    image: "assets/images/rc_rover.png",
-      description: "RC rover project integrating mechanical design and embedded programming to create a remote-controlled vehicle with a robotic arm and claw for object manipulation.",
-      bullets: [
-        "Designed chassis, 3DOF robotic arm, and claw mechanism in Onshape and SolidWorks, then 3D printed components using Bambu Lab printers.",
-        "Integrated ESP32, servo motors, and L298N motor driver for vehicle mobility and arm actuation.",
-        "Programmed C++ firmware in the Arduino IDE for wireless DS4 controller navigation and claw control.",
-        "Validated motion and grip performance through iterative testing and tuning."
-      ],
-      results: "",
-      skills: "3D Printing, SOLIDWORKS, ESP32, C++, Arduino"
     }
+    
   ];
 
   // 2. RENDER PROJECTS
   const container = document.getElementById('projects-container');
-  const projectHTML = projectsData.map(project => {
+
+  const parseProjectDate = (dateString) => {
+    const monthMap = {
+      Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
+      Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11
+    };
+    const match = dateString.match(/([A-Za-z]{3})\s+(\d{4})/);
+    if (!match) return new Date(0);
+    const [, month, year] = match;
+    return new Date(Number(year), monthMap[month] || 0, 1);
+  };
+
+  const sortedProjects = [...projectsData].sort((a, b) => {
+    return parseProjectDate(b.date) - parseProjectDate(a.date);
+  });
+
+  const projectHTML = sortedProjects.map(project => {
     const bulletPoints = project.bullets.map(item => `<li>${item}</li>`).join('');
     const resultHTML = project.results ? `<p><strong>Results:</strong> ${project.results}</p>` : '';
     
