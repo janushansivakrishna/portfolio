@@ -56,11 +56,9 @@ body{display:flex;background:#0b1a2b;color:#e2e8f0;line-height:1.6}
 }
 .hero-text{max-width:600px}
 
-/* --- UPDATED H2 STYLE HERE --- */
 .hero h2{
-  /* This ensures the font shrinks on smaller screens so it fits on one line */
   font-size: clamp(1.2rem, 3.5vw, 2.5rem); 
-  white-space: nowrap; /* This forces the text to stay on one line */
+  white-space: nowrap;
   margin-bottom:20px;
   line-height: 1.1;
 }
@@ -73,11 +71,11 @@ body{display:flex;background:#0b1a2b;color:#e2e8f0;line-height:1.6}
 }
 .hero p {
   color: #94a3b8;
-  line-height: 1.8;       /* Increases space between lines */
-  margin-bottom: 35px;    /* Increases space between text and buttons */
+  line-height: 1.8;
+  margin-bottom: 35px;
   font-size: 1.1rem;
-  max-width: 650px;       /* Keeps the line length easy to read */
-  letter-spacing: 0.02em; /* Adds a tiny bit of air between letters */
+  max-width: 650px;
+  letter-spacing: 0.02em;
 }
 .buttons { margin-top: 20px; }
 .buttons a{
@@ -103,9 +101,9 @@ body{display:flex;background:#0b1a2b;color:#e2e8f0;line-height:1.6}
   box-shadow:0 20px 40px rgba(0,0,0,.4);
 }
 
-/* --- PROJECTS SECTION --- */
+/* --- SECTIONS --- */
 .section{
-  padding-top: 80px; /* Offset for scrolling so header doesn't cover title */
+  padding-top: 80px;
   margin-bottom: 120px;
 }
 .section h2{font-size:2.2rem;margin-bottom:40px; border-bottom: 2px solid #1e3a5f; padding-bottom: 10px; display: inline-block;}
@@ -188,6 +186,12 @@ body{display:flex;background:#0b1a2b;color:#e2e8f0;line-height:1.6}
   margin-bottom:8px;
   color: #f1f5f9;
 }
+.card-content .company{
+  display:block;
+  color:#38bdf8;
+  font-weight:600;
+  margin-bottom:6px;
+}
 .card-content small {
   display: block;
   margin-bottom: 20px;
@@ -209,6 +213,13 @@ body{display:flex;background:#0b1a2b;color:#e2e8f0;line-height:1.6}
 .card-content li {
   margin-bottom: 10px;
 }
+
+/* --- ABOUT / CERTIFICATIONS --- */
+.about-block{margin-top:30px}
+.about-block h3{color:#f1f5f9;font-size:1.3rem;margin-bottom:14px}
+.about-block ul{padding-left:20px;color:#94a3b8}
+.about-block li{margin-bottom:8px}
+.about-block p{color:#94a3b8}
 
 footer{
   margin-top:auto;
@@ -233,6 +244,7 @@ footer{
   <h1>Janushan Sivakrishna</h1>
   <a href="#home" class="nav-link">Home</a>
   <a href="#projects" class="nav-link">Projects</a>
+  <a href="#experience" class="nav-link">Experience</a>
   <a href="#clubs" class="nav-link">Clubs</a>
   <a href="#about" class="nav-link">About</a>
 </div>
@@ -244,9 +256,10 @@ footer{
       <h2>Hi, I'm Janushan Sivakrishna!</h2>
       <h3>Fourth Year Mechanical Engineering Student</h3>
 <p>
-  Fourth-year Mechanical Engineering student with a strong background in mechanical design, 
-  thermal systems, and manufacturing. My experience ranges from optimizing industrial 
-  tool mechanisms in SolidWorks to performing thermodynamic analysis 
+  Fourth-year Mechanical Engineering student at Toronto Metropolitan University and
+  Senior Technical Student at Toronto Hydro. My experience spans mechanical design,
+  reverse engineering, manufacturing, and engineering analysis, from optimizing industrial
+  tool mechanisms in SolidWorks to performing thermodynamic analysis
   for a theoretical Rankine cycle power plant.
 </p>
       <div class="buttons">
@@ -263,14 +276,20 @@ footer{
       </div>
   </section>
 
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <div class="projects" id="experience-container">
+      </div>
+  </section>
+
   <section id="clubs" class="section">
     <h2>Clubs &amp; Teams</h2>
     <div class="club-grid">
       <article class="club-card">
         <img src="assets/images/MECLogo.svg" alt="MEC" />
         <h3>Metropolitan Engineering Competition</h3>
-        <span class="role">Competitions Coordinator</span>
-        <p>Led the planning and execution of a junior engineering design competition by developing competition materials, managing event operations and stakeholder coordination, mentoring students, and presenting annual competitions to judges, industry professionals, and participants.</p>
+        <span class="role">Competitions Coordinator · May 2024 – Apr 2026</span>
+        <p>Designed and managed a junior design competition for first and second year engineering students by developing abstracts and rulebooks aligned with Ontario competition standards, setting the yearly design challenge themes, resolving issues with judges and faculty under tight deadlines, mentoring students, and presenting the 2024 and 2025 competitions to judges, industry professionals, and participants.</p>
         <div class="club-tags">
           <span>Powerpoint</span>
           <span>Excel</span>
@@ -283,8 +302,8 @@ footer{
       <article class="club-card">
         <img src="assets/images/mcat.jpg" alt="MCAT" />
         <h3>Mechanical Contractors Association of Toronto (TMU Chapter)</h3>
-        <span class="role">VP of Events</span>
-        <p>Led a team to plan and execute professional, academic, and social events for the student body and the Mechanical Contractors Association of Toronto (TMU Chapter), strengthening connections between students and industry professionals.</p>
+        <span class="role">President (Jul 2026 – Present) · VP of Events (Nov 2025 – Aug 2026)</span>
+        <p>Now leading the TMU chapter as President, after serving as VP of Events, where I led a team to plan and execute professional, academic, and social events for the student body and the Mechanical Contractors Association of Toronto (TMU Chapter), strengthening connections between students and industry professionals.</p>
         <div class="club-tags">
           <span>Team Leadership</span>
           <span>Project Management</span>
@@ -292,25 +311,60 @@ footer{
           <span>Community Outreach</span>
         </div>
       </article>
-        <article class="club-card">
-          <img src="assets/images/oec.jpg" alt="OEC" />
-          <h3>Ontario Engineering Competition</h3>
-          <span class="role">Competition Lead</span>
-          <p>Leading the development and execution of the Senior Design Competition by designing technical concepts and prototypes, coordinating competition logistics and requirements, and collaborating with teams, faculty, and judges to deliver an innovative engineering design challenge.</p>
-          <div class="club-tags">
+      <article class="club-card">
+        <img src="assets/images/oec.jpg" alt="OEC" />
+        <h3>Ontario Engineering Competition</h3>
+        <span class="role">Competition Lead · Mar 2026 – Present</span>
+        <p>Leading the development and execution of the Senior Design Competition by designing technical concepts and prototypes, coordinating competition logistics and requirements, and collaborating with teams, faculty, and judges to deliver an innovative engineering design challenge.</p>
+        <div class="club-tags">
           <span>Arduino</span>
           <span>Teamwork</span>
           <span>Project Management</span>
           <span>Creativity and Innovation</span>
           <span>Communication</span>
-          </div>
-        </article>
+        </div>
+      </article>
+      <article class="club-card">
+        <h3>Mechanical Engineering Course Union (TMU)</h3>
+        <span class="role">Vice President Finance · Jul 2026 – Present</span>
+        <p>Managing finances for the Mechanical Engineering Course Union at Toronto Metropolitan University.</p>
+        <div class="club-tags">
+          <span>Finance</span>
+          <span>Teamwork</span>
+          <span>Leadership</span>
+        </div>
+      </article>
     </div>
   </section>
 
   <section id="about" class="section" style="min-height: 50vh;">
     <h2>About Me</h2>
-    <p>I'm a fourth-year Mechanical Engineering student at Toronto Metropolitan University with a focus on robotics, thermodynamics, and embedded systems. Through engineering projects, robotics competitions, and leadership roles, I've built hands-on skills in CAD design, 3D printing, programming, electronics integration, and mechanical prototyping. Working with robotic systems, microcontrollers, and mechanical design has sharpened my problem-solving and communication abilities while grounding engineering theory in real-world application. I'm particularly drawn to thermodynamics, energy systems, and the intersection of mechanical and embedded technologies — with a long-term interest in robotics, automation, and sustainable engineering.</p>
+    <p>I'm a fourth-year Mechanical Engineering student at Toronto Metropolitan University and a Senior Technical Student at Toronto Hydro, working in Capital Projects &amp; Customer Demand. My experience spans mechanical design, reverse engineering, manufacturing, and engineering analysis, with projects including a Rankine cycle power plant, autonomous robotics, and mechanical mechanisms. I use tools such as SolidWorks, QuickSurface, MATLAB, and 3D scanning to turn concepts into practical solutions, and I'm particularly drawn to 3D prototyping, Raspberry Pi, and computer vision. As President of the Mechanical Contractors Association TMU Chapter, I'm passionate about engineering, innovation, and hands-on problem solving.</p>
+
+    <div class="about-block">
+      <h3>Technical Skills</h3>
+      <ul>
+        <li><strong>Robotics &amp; Controls:</strong> Computer Vision (OpenCV, ArUco), Autonomous Navigation, Sensor Integration (Camera, Ultrasonic, IR, Color), Sensor Filtering, Motor Control, State-Based Control, Control Systems</li>
+        <li><strong>Embedded &amp; Programming:</strong> Python, C/C++, MATLAB, Arduino, ESP32, Raspberry Pi, Flask, VBA</li>
+        <li><strong>Mechanical Design &amp; Fabrication:</strong> SolidWorks (CSWA), Onshape, QuickSurface, AutoCAD, Fusion 360, Engineering Drawings, BOM, Ansys Mechanical (FEA), 3-D Printing (FDM), CNC Machining, Reverse Engineering, Rapid Prototyping</li>
+      </ul>
+    </div>
+
+    <div class="about-block">
+      <h3>Certifications</h3>
+      <ul>
+        <li>Certified SOLIDWORKS Design Associate</li>
+        <li>Python Basics</li>
+        <li>Seize the Moment: Advanced Manufacturing Training Completion</li>
+        <li>Understanding US Patents: A Deeper Dive</li>
+      </ul>
+    </div>
+
+    <div class="about-block">
+      <h3>Education</h3>
+      <p><strong>Toronto Metropolitan University</strong> — Bachelor of Engineering, Mechanical Engineering (Sep 2023 – Apr 2028)</p>
+      <p style="margin-top:8px"><strong>Relevant courses:</strong> Control Systems, Solid Mechanics, Materials Science, Applied Thermodynamics</p>
+    </div>
   </section>
 
   <footer>
@@ -323,12 +377,39 @@ footer{
   // 1. PROJECT DATA
   const projectsData = [
   {
+    title: "Honda Accord Ducktail Spoiler",
+    date: "Oct 2026 – Present",
+    image: "", // TODO: add an image path, e.g. "assets/images/spoiler.jpg"
+    description: "Custom 3D-printed ducktail spoiler for a Honda Accord, designed from a 3D scan of the trunk lid so it follows the car's contours.",
+    bullets: [
+      "Designed the spoiler in SolidWorks, using QuickSurface to convert a 3-D scan of the trunk lid into CAD surfaces; split the 1.17 m span into 5 segments to fit a 256 mm Bambu Lab A1 print bed.",
+      "Engineered a flush-mount third brake light recess with a hidden wire channel to the trunk, driven by equation-based global variables for parametric resizing to different light modules; applied 0.2 mm print-fit clearances.",
+      "Designed doweled joints (12 custom Ø8 mm printed pins) and hidden engraved part numbers for assembly; exported and verified watertight STL meshes for FDM batch printing."
+    ],
+    results: "",
+    skills: "SOLIDWORKS, QuickSurface, 3D Scanning, 3D Printing"
+  },
+  {
+    title: "Camera-Guided Following RC Car",
+    date: "Sep 2026 – Present",
+    image: "", // TODO: add an image path, e.g. "assets/images/rc_car.jpg"
+    description: "Camera-guided RC car (Raspberry Pi Zero 2 W, OV5647) that tracks an ArUco marker on a lead vehicle with OpenCV and follows it at a set distance.",
+    bullets: [
+      "Estimates distance using a pinhole camera model and one-point focal length calibration to within ±0.5 cm of tape measurements from 10 to 140 cm at 25 FPS.",
+      "Programmed Python distance-keeping control that holds a 30 cm following gap and hard-stops inside 25 cm, steering an L298N-driven four-motor differential drive from the marker's horizontal offset, with an alpha-beta filter to smooth distance and closing-speed readings.",
+      "Added a camera watchdog that stops the motors within 0.3 s of a fault, arm and emergency-stop controls, and a Flask web dashboard with live video, telemetry, and tuning.",
+      "Designed the SolidWorks chassis and mounts and 3-D printed all parts."
+    ],
+    results: "",
+    skills: "Python, OpenCV, Raspberry Pi, Flask, SOLIDWORKS, 3D Printing"
+  },
+  {
     title: "RC Rover",
     date: "Apr 2026 – May 2026",
     image: "assets/images/rc_rover.png",
       description: "RC rover project integrating mechanical design and embedded programming to create a remote-controlled vehicle with a robotic arm and claw for object manipulation.",
       bullets: [
-        "Designed chassis, 3DOF robotic arm, and claw mechanism in Onshape and SolidWorks, then 3D printed components using Bambu Lab printers.",
+        "Designed a rover chassis, 3-DOF robotic arm, and claw end-effector (3 lb payload) in Onshape and SolidWorks; FDM 3D printed all structural components on Bambu Lab printers.",
         "Integrated ESP32, servo motors, and L298N motor driver for vehicle mobility and arm actuation.",
         "Programmed C++ firmware in the Arduino IDE for wireless DS4 controller navigation and claw control.",
         "Validated motion and grip performance through iterative testing and tuning."
@@ -344,7 +425,7 @@ footer{
       
       link: "https://devpost.com/software/biathlone",
       
-      description: "Designed and built an autonomous Arduino-based robot integrating ultrasonic, IR, and color sensors for real-time navigation, obstacle avoidance, and path selection.",
+      description: "Designed and built a fully autonomous Arduino robot in under 24 hours at a team hackathon, integrating ultrasonic, IR, and color sensors for real-time obstacle avoidance, path selection, and task sequencing.",
       bullets: [
         "Developed embedded C++ code using the Arduino IDE to implement state-based logic, sensor feedback control, and conditional decision-making for autonomous task sequencing.",
         "Optimized mechanical stability and sensor calibration through iterative testing to achieve consistent performance under strict competition time constraints."
@@ -394,7 +475,54 @@ footer{
     
   ];
 
-  // 2. RENDER PROJECTS
+  // 2. EXPERIENCE DATA (edit this list to add/change jobs; newest first)
+  const experienceData = [
+    {
+      title: "Senior Technical Student – Capital Projects & Customer Demand",
+      company: "Toronto Hydro",
+      date: "Sep 2026 – Present • Toronto, ON",
+      description: "",
+      bullets: [
+        "Helped design energization, upgrades, and removal of electrical services for hundreds of high-capital construction projects across the Toronto power grid, supporting high-level design and project management.",
+        "Conducted customer meetings and weekly team touchpoints; prepared quotations, timelines, billing, and offers to connect for contractors, auditors, and customers.",
+        "Developed project and finance tracking methods supporting six managers; built an Excel VBA macro with SAP connection and billing modules to automate billing in SAP Enterprise (ML81N)."
+      ]
+    },
+    {
+      title: "Product Design Engineer",
+      company: "CURRENT Engineering Studio",
+      date: "Jun 2026 – Present • Brampton, ON",
+      description: "",
+      bullets: [
+        "Reverse-engineered mechanical components using QuickSurface and SolidWorks, converting 3-D scan data into accurate parametric CAD models for manufacturing and redesign.",
+        "Processed and repaired scan mesh data, achieving dimensional accuracy within ±0.15 mm between scanned geometry and reconstructed CAD models.",
+        "Created engineering drawings and assemblies from reverse-engineered components, reducing redesign time and supporting rapid prototyping."
+      ]
+    },
+    {
+      title: "Mechanical Design Intern",
+      company: "CPM Tools Industries Inc.",
+      date: "Mar 2025 – May 2025 • Toronto, ON",
+      description: "",
+      bullets: [
+        "Optimized three self-adjusting and ratchet mechanisms in SolidWorks, improving tool efficiency by 10%.",
+        "Produced detailed technical drawings and a comprehensive BOM in SolidWorks, ensuring full manufacturing accuracy and material traceability.",
+        "Conducted competitive analysis of four competitors and wrote a 5-page market expansion report identifying three new product opportunities."
+      ]
+    },
+    {
+      title: "Director",
+      company: "Woodbridge Sports Dome Inc.",
+      date: "Jul 2023 – Aug 2026 • Woodbridge, ON",
+      description: "",
+      bullets: [
+        "Organized and led sports activities for 20+ players, fostering teamwork and skill development.",
+        "Directed drills and taught technical skills, improving player performance."
+      ]
+    }
+  ];
+
+  // 3. RENDER PROJECTS
   const container = document.getElementById('projects-container');
 
   const parseProjectDate = (dateString) => {
@@ -419,7 +547,7 @@ footer{
     // Check if a link exists. If yes, wrap image in <a> tag.
     const imageHTML = project.link 
       ? `<a href="${project.link}" target="_blank" title="View on Devpost"><img src="${project.image}" alt="${project.title}" style="cursor:pointer; transition: opacity 0.3s;"></a>` 
-      : `<img src="${project.image}" alt="${project.title}">`;
+      : (project.image ? `<img src="${project.image}" alt="${project.title}">` : '');
 
     return `
       <div class="card">
@@ -437,7 +565,27 @@ footer{
   }).join('');
   container.innerHTML = projectHTML;
 
-  // 3. HIGHLIGHT SIDEBAR LINK ON SCROLL
+  // 4. RENDER EXPERIENCE
+  const experienceContainer = document.getElementById('experience-container');
+  experienceContainer.innerHTML = experienceData.map(job => {
+    const bulletList = job.bullets.length
+      ? `<ul>${job.bullets.map(item => `<li>${item}</li>`).join('')}</ul>`
+      : '';
+    const descHTML = job.description ? `<p>${job.description}</p>` : '';
+    return `
+      <div class="card">
+        <div class="card-content">
+          <h3>${job.title}</h3>
+          <span class="company">${job.company}</span>
+          <small>${job.date}</small>
+          ${descHTML}
+          ${bulletList}
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // 5. HIGHLIGHT SIDEBAR LINK ON SCROLL
   const sections = document.querySelectorAll("section");
   const navLi = document.querySelectorAll(".sidebar a");
 
