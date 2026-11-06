@@ -140,15 +140,11 @@ body{display:flex;background:#0b1a2b;color:#e2e8f0;line-height:1.6}
 }
 .club-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.35)}
 .club-card img{
-  width:100%;
-  border-radius:12px;
-  margin-bottom:20px;
-}
-.club-card img.club-logo{
   width:112px;
   height:112px;
-  object-fit:cover;
+  object-fit:contain;
   border-radius:50%;
+  margin-bottom:20px;
 }
 .club-card h3{
   font-size:1.3rem;
@@ -322,7 +318,7 @@ footer{
     <h2>Clubs &amp; Teams</h2>
     <div class="club-grid">
       <article class="club-card">
-        <img src="assets/images/MECLogo.svg" alt="MEC" />
+        <img src="assets/images/MECLogo.svg" alt="MEC" class="club-logo" />
         <h3>Metropolitan Engineering Competition</h3>
         <span class="role">Competitions Coordinator · May 2024 – Apr 2026</span>
         <p>Designed and managed a junior design competition for first and second year engineering students by developing abstracts and rulebooks aligned with Ontario competition standards, setting the yearly design challenge themes, resolving issues with judges and faculty under tight deadlines, mentoring students, and presenting the 2024 and 2025 competitions to judges, industry professionals, and participants.</p>
@@ -336,7 +332,7 @@ footer{
         </div>
       </article>
       <article class="club-card">
-        <img src="assets/images/mcat.jpg" alt="MCAT" />
+        <img src="assets/images/mcat.jpg" alt="MCAT" class="club-logo" />
         <h3>Mechanical Contractors Association of Toronto (TMU Chapter)</h3>
         <span class="role">President (Jul 2026 – Present) · VP of Events (Nov 2025 – Aug 2026)</span>
         <p>Now leading the TMU chapter as President, after serving as VP of Events, where I led a team to plan and execute professional, academic, and social events for the student body and the Mechanical Contractors Association of Toronto (TMU Chapter), strengthening connections between students and industry professionals.</p>
@@ -348,7 +344,7 @@ footer{
         </div>
       </article>
       <article class="club-card">
-        <img src="assets/images/oec.jpg" alt="OEC" />
+        <img src="assets/images/oec.jpg" alt="OEC" class="club-logo" />
         <h3>Ontario Engineering Competition</h3>
         <span class="role">Competition Lead · Mar 2026 – Present</span>
         <p>Leading the development and execution of the Senior Design Competition by designing technical concepts and prototypes, coordinating competition logistics and requirements, and collaborating with teams, faculty, and judges to deliver an innovative engineering design challenge.</p>
