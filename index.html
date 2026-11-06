@@ -144,6 +144,12 @@ body{display:flex;background:#0b1a2b;color:#e2e8f0;line-height:1.6}
   border-radius:12px;
   margin-bottom:20px;
 }
+.club-card img.club-logo{
+  width:112px;
+  height:112px;
+  object-fit:cover;
+  border-radius:50%;
+}
 .club-card h3{
   font-size:1.3rem;
   margin-bottom:8px;
@@ -243,10 +249,10 @@ footer{
 <div class="sidebar">
   <h1>Janushan Sivakrishna</h1>
   <a href="#home" class="nav-link">Home</a>
+  <a href="#about" class="nav-link">About Me</a>
   <a href="#projects" class="nav-link">Projects</a>
   <a href="#experience" class="nav-link">Experience</a>
   <a href="#clubs" class="nav-link">Clubs</a>
-  <a href="#about" class="nav-link">About</a>
 </div>
 
 <div class="main">
@@ -256,11 +262,11 @@ footer{
       <h2>Hi, I'm Janushan Sivakrishna!</h2>
       <h3>Fourth Year Mechanical Engineering Student</h3>
 <p>
-  Fourth-year Mechanical Engineering student at Toronto Metropolitan University and
-  Senior Technical Student at Toronto Hydro. My experience spans mechanical design,
-  reverse engineering, manufacturing, and engineering analysis, from optimizing industrial
-  tool mechanisms in SolidWorks to performing thermodynamic analysis
-  for a theoretical Rankine cycle power plant.
+  Fourth-year Mechanical Engineering student at Toronto Metropolitan University seeking
+  mechanical engineering internship opportunities. At Toronto Hydro and through hands-on
+  design projects, I apply SolidWorks, prototyping, reverse engineering, and engineering
+  analysis to practical challenges. I’m especially interested in mechanical design,
+  product development, and manufacturing.
 </p>
       <div class="buttons">
         <a href="#projects" class="btn-primary">View My Work</a>
@@ -268,6 +274,36 @@ footer{
       </div>
     </div>
     <img src="assets/images/profile.jpg" alt="Profile Photo">
+  </section>
+
+  <section id="about" class="section" style="min-height: 50vh;">
+    <h2>About Me</h2>
+    <p>I'm a fourth-year Mechanical Engineering student at Toronto Metropolitan University seeking an internship where I can contribute to mechanical design, product development, or manufacturing. As a Senior Technical Student at Toronto Hydro, I support work in Capital Projects &amp; Customer Demand, building experience in a professional engineering environment. My hands-on work spans SolidWorks design, reverse engineering, prototyping, and engineering analysis, including a theoretical Rankine cycle power plant and autonomous robotics projects. I enjoy taking ideas from concept toward practical solutions and collaborating across teams to solve technical challenges.</p>
+
+    <div class="about-block">
+      <h3>Technical Skills</h3>
+      <ul>
+        <li><strong>Robotics &amp; Controls:</strong> Computer Vision (OpenCV, ArUco), Autonomous Navigation, Sensor Integration (Camera, Ultrasonic, IR, Color), Sensor Filtering, Motor Control, State-Based Control, Control Systems</li>
+        <li><strong>Embedded &amp; Programming:</strong> Python, C/C++, MATLAB, Arduino, ESP32, Raspberry Pi, Flask, VBA</li>
+        <li><strong>Mechanical Design &amp; Fabrication:</strong> SolidWorks (CSWA), Onshape, QuickSurface, AutoCAD, Fusion 360, Engineering Drawings, BOM, Ansys Mechanical (FEA), 3-D Printing (FDM), CNC Machining, Reverse Engineering, Rapid Prototyping</li>
+      </ul>
+    </div>
+
+    <div class="about-block">
+      <h3>Certifications</h3>
+      <ul>
+        <li>Certified SOLIDWORKS Design Associate</li>
+        <li>Python Basics</li>
+        <li>Seize the Moment: Advanced Manufacturing Training Completion</li>
+        <li>Understanding US Patents: A Deeper Dive</li>
+      </ul>
+    </div>
+
+    <div class="about-block">
+      <h3>Education</h3>
+      <p><strong>Toronto Metropolitan University</strong> — Bachelor of Engineering, Mechanical Engineering (Sep 2023 – Apr 2028)</p>
+      <p style="margin-top:8px"><strong>Relevant courses:</strong> Control Systems, Solid Mechanics, Materials Science, Applied Thermodynamics</p>
+    </div>
   </section>
 
   <section id="projects" class="section">
@@ -325,6 +361,7 @@ footer{
         </div>
       </article>
       <article class="club-card">
+        <img src="assets/images/mecu-logo.png" alt="Mechanical Engineering Course Union logo" class="club-logo" />
         <h3>Mechanical Engineering Course Union (TMU)</h3>
         <span class="role">Vice President Finance · Jul 2026 – Present</span>
         <p>Managing finances for the Mechanical Engineering Course Union at Toronto Metropolitan University.</p>
@@ -334,36 +371,6 @@ footer{
           <span>Leadership</span>
         </div>
       </article>
-    </div>
-  </section>
-
-  <section id="about" class="section" style="min-height: 50vh;">
-    <h2>About Me</h2>
-    <p>I'm a fourth-year Mechanical Engineering student at Toronto Metropolitan University and a Senior Technical Student at Toronto Hydro, working in Capital Projects &amp; Customer Demand. My experience spans mechanical design, reverse engineering, manufacturing, and engineering analysis, with projects including a Rankine cycle power plant, autonomous robotics, and mechanical mechanisms. I use tools such as SolidWorks, QuickSurface, MATLAB, and 3D scanning to turn concepts into practical solutions, and I'm particularly drawn to 3D prototyping, Raspberry Pi, and computer vision. As President of the Mechanical Contractors Association TMU Chapter, I'm passionate about engineering, innovation, and hands-on problem solving.</p>
-
-    <div class="about-block">
-      <h3>Technical Skills</h3>
-      <ul>
-        <li><strong>Robotics &amp; Controls:</strong> Computer Vision (OpenCV, ArUco), Autonomous Navigation, Sensor Integration (Camera, Ultrasonic, IR, Color), Sensor Filtering, Motor Control, State-Based Control, Control Systems</li>
-        <li><strong>Embedded &amp; Programming:</strong> Python, C/C++, MATLAB, Arduino, ESP32, Raspberry Pi, Flask, VBA</li>
-        <li><strong>Mechanical Design &amp; Fabrication:</strong> SolidWorks (CSWA), Onshape, QuickSurface, AutoCAD, Fusion 360, Engineering Drawings, BOM, Ansys Mechanical (FEA), 3-D Printing (FDM), CNC Machining, Reverse Engineering, Rapid Prototyping</li>
-      </ul>
-    </div>
-
-    <div class="about-block">
-      <h3>Certifications</h3>
-      <ul>
-        <li>Certified SOLIDWORKS Design Associate</li>
-        <li>Python Basics</li>
-        <li>Seize the Moment: Advanced Manufacturing Training Completion</li>
-        <li>Understanding US Patents: A Deeper Dive</li>
-      </ul>
-    </div>
-
-    <div class="about-block">
-      <h3>Education</h3>
-      <p><strong>Toronto Metropolitan University</strong> — Bachelor of Engineering, Mechanical Engineering (Sep 2023 – Apr 2028)</p>
-      <p style="margin-top:8px"><strong>Relevant courses:</strong> Control Systems, Solid Mechanics, Materials Science, Applied Thermodynamics</p>
     </div>
   </section>
 
